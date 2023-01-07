@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="all" />
+    <title>Sign up </title>
+  </head>
+  <body>
+    
+    <!--start main-->
+    <div class="main">
+      <header>
+        <button class="boton active" id="v1">Volunteer</button>
+        <button class="boton" id="v2">special needs</button>
+      </header>
+    <!--end main-->
+    <!--start volunteer -->
+      <div class="form volunteer act" id="vol">
+        <form>
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+          <select name="" id="select">
+            <option>All ages can be join</option>
+          </select>
+          <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Password"/>
+          <input type="text" placeholder="address"/>
+          <input type="text" placeholder="city"/>
+          <input type="checkbox" name="" id="check" />
+          <label for="I agree">I agree</label>
+          <button type="submit" class="submit">Sign up as volunteer</button>
+                  <hr />
+      <h2>Or sign up with</h2>  
+        <div class="social">
+          <i class="fa fa-github"></i>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-instagram"></i>
+        </div>
+        </form>
+      </div>
+      <!--start special needs-->
+      <div class="form special " id="special">
+        <form>
+          <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Password"/>
+          <textarea placeholder="please describe your desease..."></textarea>
+          <input type="checkbox" name="" id="check" />
+          <label for="I agree">I agree</label>
+          <button class="submit s2">Sign up as special needs</button>
+        </form>
+        <hr />
+      <h2>Or sign up with</h2>  
+        <div class="social">
+          <i class="fa fa-github"></i>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+      <script>
+    // heades buttons when you choose 
+      var v1 = document.getElementById("v1");
+      var v2 = document.getElementById("v2");
+    //forms
+      var vol = document.getElementById("vol");
+      var sp = document.getElementById("special");
+      // action 
+     v1.onclick = function(){
+       v2.classList.remove("active") ;
+       v1.classList.add("active") ;
+       //form 
+      sp.classList.remove("act") ;
+      vol.classList.add("act") ;
+    }
+    v2.onclick = function(){
+      v1.classList.remove("active") ;
+       v2.classList.add("active") ;
+       //form 
+      vol.classList.remove("act") ;
+      sp.classList.add("act") ;
+    }
+    </script>
+  </body>
+</html>
